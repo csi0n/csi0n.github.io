@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    <div id="container">
+     <div id="main" role="main">
+      <header>
+        <h1>{% if post.title %}{{ post.title }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+      </header>
+      <nav>
+        <span>
+          <a href="{{ site.url }}">HOME</a>
+        </span>
+        <span>
+          <a href="{{ "/about/" | prepend: site.baseurl }}">ABOUT</a>
+        </span>
+        <span>
+          <a href="{{ "/categories/" | prepend: site.baseurl }}">CATEGORIES</a>
+        </span>
+        <span>
+          <a href="{{ "/guestbook/" | prepend: site.baseurl }}">GUESTBOOK</a>
+        </span>
+        <span>
+          <a href="{{ "/tags/" | prepend: site.baseurl }}">TAGS</a>
+        </span>
+        <span>
+          <a href="{{ "/links/" | prepend: site.baseurl }}">LINKS</a>
+        </span>
+        <span>
+          <a title="subscribe by RSS" class="" href="{{ "/feed.xml" | prepend: site.baseurl }}">subscribe</a>
+        </span>
+      </nav>
+      <article class="content">
+       {{ content }}
+      </artical>
+     </div>
+    </div>
+    {% include footer.html %}
+  </body>
+
+</html>

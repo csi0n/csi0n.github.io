@@ -1,0 +1,12 @@
+# Site settings
+title: csi0n
+email: chen655@163.com
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.csi0n.cn" # the base hostname & protocol for your site
+twitter_username: csi0n
+github_username:  csi0n
+author: Chen Huaqing
+
+
+# Build settings
+markdown: kramdown
